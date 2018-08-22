@@ -1,0 +1,28 @@
+<?php
+/**
+ * @author Montu Molla <m.molla@yahoo.com>
+ */
+
+/**
+ * @var \Lutech\DeleteAccount\Block\Delete $block
+ */
+?>
+<form class="form delete-account-form" action="<?php echo $block->getFormAction() ?>" method="post" id="form-validate" data-hasrequired="* Required Fields" autocomplete="off" data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <input name="form_key" type="hidden" value="<?php echo $block->getFormKey() ?>">       
+        <legend class="legend"><span><?php echo __("Your account will be permanently deleted. Once you delete your account, there is no going back. Please be certian.") ?></span></legend><br>
+        <div class="field field-name-password required">
+            <label class="label" for="password">
+                <span><?php echo __("Enter your password") ?></span>
+            </label>
+            <div class="control">
+                <input type="password" id="password" name="password" title="Password" class="input-text required-entry" data-validate="{'required':true, 'validate-password':true}" aria-required="true">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action save primary action-delete" title="Save"><span><?php echo __("Delete") ?></span></button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Montu Molla <m.molla@lutehc.it>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title"> 
+            <action method="setPageTitle"> 
+                <argument translate="true" name="title" xsi:type="string">Delete Account</argument> 
+            </action> 
+        </referenceBlock> 
+        <referenceContainer name="content">
+            <block class="Lutech\DeleteAccount\Block\Delete" 
+                   name="customer_delete_form" 
+                   template="Lutech_DeleteAccount::account_delete_form.phtml" 
+            /> 
+        </referenceContainer>
+    </body>
+</page>
